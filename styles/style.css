@@ -36,7 +36,7 @@ section {
 }
 
 section.input-section {
-    height: 30%;
+    height: 35%;
     background: aliceblue;
 }
 
@@ -50,11 +50,11 @@ form {
 label {
     display: flex;
     flex-direction: column;
-    margin: 0.25em;
+    margin: 0.5em;
 }
 
 section.current-poll-section {
-    height: 30%;
+    height: 35%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -67,6 +67,7 @@ section.current-poll-section {
     grid-row: 1 / span 1;
     justify-self: center;
     align-self: center;
+    margin: 0.25em;
 }
 
 .current-containerA {
@@ -89,6 +90,7 @@ section.current-poll-section {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: green;
     grid-column: 1 / span 4;
     grid-row: 4 / span 1;
@@ -106,9 +108,19 @@ section.current-poll-section {
 
 .current-result {
     width: 3em;
-    height: 1.5em;
     display: inline-block;
     background: seashell;
     text-align: center;
     margin: 0 3em;
+}
+
+section.past-results-section {
+    height: 30%;
+    background: whitesmoke;
+}
+
+footer {
+    width: 100%;
+    height: 5%;
+    background: var(--color2);
 }
