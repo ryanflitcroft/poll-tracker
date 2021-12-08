@@ -24,9 +24,9 @@ git checkout -b workOnANewBranch
 
     * Submit button
 
-1. Current poll section -
+1. Current poll Section -
 
-    **Elements in this section should not display until form data submit event.**
+    **Elements in this section should not display text content until form data submit event.**
 
     *On form data submit event, display form data for the following:*
 
@@ -46,16 +46,23 @@ git checkout -b workOnANewBranch
 
     * Option B decrement
 
+    *User click event should update state for the following text elements:*
+
+    * Option A results text element
+
+    * Option B results text element
+
+        *User click event should clear section data and update state for Past Results Section data*
+
     * Close Poll submit
 
 1. Past Results Section -
 
-    **Elements in this section should not display until Close Poll Submit click  event.**
-
-
     * Past Results text element
 
     * Flexible container for *Closed Poll* elements
+
+    **Elements in this section should not display until Close Poll Submit click  event.**
 
     *note*: closed poll item elements will be created in JSON.
 
@@ -79,27 +86,75 @@ git checkout -b workOnANewBranch
 
 * Input form section -
 
+  1. form element to contain:
+
+      * 3 text input element for user to submit 'question', 'answer a', answer b'
+
+      * button element for user to submit form data to be applied to current poll section
+
 ```html
 <section class="input-section">
   <form id="input-form">
     <label for="q">Question
       <input type="text" class="" id="question-input" name="q">
     </label>
-        <label for="a">Answer A
+    <label for="a">Answer A
       <input type="text" class="" id="answerA-input" name="a">
     </label>
-        <label for="b">Answer B
+    <label for="b">Answer B
       <input type="text" class="" id="answerB-input" name="b">
     </label>
+    <button type="submit" form="input-form" id="input-submit">Submit</button>
   </form>
 </section>
 ```
 
 * Current poll section -
 
+    1. h2 element to contain text content of user input 'question-input'
+
+    1. button element for each:
+
+        *to update current state of resultA or resultB*
+
+        * increment 'current option a'
+
+        * decrement 'current option a'
+
+        * increment 'current option b'
+
+        * decrement 'current option b'
+
+        *to clear current text content of Current Poll Section, update state for Past Results Section
+
+    1. span element for each:
+
+        * current option a to contain text content of user input 'answerA-input'
+
+        * current option B to contain text content of user input 'answerB-input'
+
+        * resultA to contain text content of current state of resultA
+
+        * resultB to reflect current state of resultB
+
 ```html
 <section class="current-poll-section">
-
+  <h2 id="current-poll-question">###</h2>
+  <div class="current-container">
+    <button type="button" class="" id="decrementA">-</button>
+    <span class="" id="current-optionA">###</span>
+    <button type="button" class="" id="incrementA">+</button>
+  </div>
+  <div class="current-container">
+    <button type="button" class="" id="decrementB">-</button>
+    <span class="" id="current-optionB">###</span>
+    <button type="button" class="" id="incrementB">+</button>
+  </div>
+  <div class="current-container">
+    <span class="current-result" id="resultA">###</span>
+    <button type="button" class="" id="close-poll-button">
+    <span class="current-result" id="resultB">###</span>
+  </div>
 </section>
 ```
 
@@ -107,7 +162,10 @@ git checkout -b workOnANewBranch
 
 ```html
 <section class="past-results-section">
-
+  <h2>Past Results</h2>
+  <div id="closed-poll-container">
+    <!-- Closed Poll item elements will be created in JSON -->
+  </div>
 </section>
 ```
 

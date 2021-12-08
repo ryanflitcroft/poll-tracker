@@ -14,10 +14,53 @@
 
 <body>
     <header>
-
+        <h1>Poll Tracker</h1>
     </header>
-    <main>
 
+    <main>
+        <!-- INPUT SECTION -->
+        <section class="input-section">
+            <form id="input-form">
+              <label for="q">Question
+                <input type="text" class="input-field" id="question-input" name="q">
+              </label>
+              <label for="a">Answer A
+                <input type="text" class="input-field" id="answerA-input" name="a">
+              </label>
+              <label for="b">Answer B
+                <input type="text" class="input-field" id="answerB-input" name="b">
+              </label>
+              <button type="submit" form="input-form" id="input-submit">Submit</button>
+            </form>
+          </section>
+
+          <!-- CURRENT POLL SECTION -->
+          <section class="current-poll-section">
+            <h2 id="current-poll-question">###</h2>
+            <div class="current-containerA">
+              <button type="button" class="" id="decrementA">-</button>
+              <span class="current-option" id="current-optionA">###</span>
+              <button type="button" class="" id="incrementA">+</button>
+            </div>
+            <div class="current-containerB">
+              <button type="button" class="" id="decrementB">-</button>
+              <span class="current-option" id="current-optionB">###</span>
+              <button type="button" class="" id="incrementB">+</button>
+            </div>
+            <div class="current-container-result">
+              <span class="current-result" id="resultA">###</span>
+              <button type="button" class="" id="close-poll-button">Close Poll</button>
+              <span class="current-result" id="resultB">###</span>
+            </div>
+          </section>
+
+          <!-- PAST RESULTS SECTION -->
+          <section class="past-results-section">
+            <h2>Past Results</h2>
+            <div id="closed-poll-container">
+              <!-- Closed Poll item elements will be created in JSON -->
+            </div>
+          </section>
     </main>
     <footer>
 
