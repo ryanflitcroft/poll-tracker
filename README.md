@@ -181,6 +181,19 @@ git checkout -b workOnANewBranch
 
 3. Write functions for:
 
-    *
+    * displayCurrentPoll();
+        * mutates DOM to display current state of current poll
+
+    * displayAllPolls();
+        * clears out DOM and appends to poll div using current state of past polls
+
+    * makePoll();
+        * poll object derived from state
+
+    * renderPoll(poll);
+        * returns DOM node
+
+    * renderOption(name, score);
+        * return DOM node
 
 *note*: TDD for each pure function

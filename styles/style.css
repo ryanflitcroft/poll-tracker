@@ -54,39 +54,49 @@ label {
 }
 
 section.current-poll-section {
-    height: 35%;
-    display: grid;
+    height: 25%;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); */
     background: var(--color2);
 }
 
-.current-poll-section h2 {
+section.button-section {
+    height: 10%;
+    flex-direction: row;
+    background: aliceblue;
+}
+
+button {
+    margin: 0 1em;
+}
+
+/* .current-poll-section h2 {
     color: dodgerblue;
     grid-column: 1 / span 4;
     grid-row: 1 / span 1;
     justify-self: center;
     align-self: center;
     margin: 0.25em;
-}
+} */
 
-.current-containerA {
+/* .current-containerA {
     color: magenta;
     grid-column: 1 / span 4;
     grid-row: 2 / span 1;
     justify-self: center;
     align-self: center;
-}
+} */
 
-.current-containerB {
+/* .current-containerB {
     color: magenta;
     grid-column: 1 / span 4;
     grid-row: 3 / span 1;
     justify-self: center;
     align-self: center;
-}
+} */
 
-.current-container-result {
+/* .current-container-result {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -96,27 +106,36 @@ section.current-poll-section {
     grid-row: 4 / span 1;
     justify-self: center;
     align-self: center;
-}
+} */
 
-.current-option {
+/* .current-option {
     width: 150px;
     display: inline-block;
     margin: 0 1em;
     background: honeydew;
     text-align: center;
-}
+} */
 
-.current-result {
+/* .current-result {
     width: 3em;
     display: inline-block;
     background: seashell;
     text-align: center;
     margin: 0 3em;
-}
+} */
 
 section.past-results-section {
     height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     background: whitesmoke;
+}
+
+#closed-poll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {

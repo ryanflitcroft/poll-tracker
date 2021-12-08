@@ -22,13 +22,13 @@
         <section class="input-section">
             <form id="input-form">
               <label for="q">Question
-                <input type="text" class="input-field" id="question-input" name="q">
+                <input type="text" class="input-field" id="question-input" name="q" required>
               </label>
               <label for="a">Answer A
-                <input type="text" class="input-field" id="answerA-input" name="a">
+                <input type="text" class="input-field" id="answerA-input" name="a" required>
               </label>
               <label for="b">Answer B
-                <input type="text" class="input-field" id="answerB-input" name="b">
+                <input type="text" class="input-field" id="answerB-input" name="b" required>
               </label>
               <button type="submit" form="input-form" id="input-submit">Submit</button>
             </form>
@@ -37,21 +37,21 @@
           <!-- CURRENT POLL SECTION -->
           <section class="current-poll-section">
             <h2 id="current-poll-question">###</h2>
-            <div class="current-containerA">
-              <button type="button" class="" id="decrementA">-</button>
-              <span class="current-option" id="current-optionA">###</span>
-              <button type="button" class="" id="incrementA">+</button>
-            </div>
-            <div class="current-containerB">
-              <button type="button" class="" id="decrementB">-</button>
-              <span class="current-option" id="current-optionB">###</span>
-              <button type="button" class="" id="incrementB">+</button>
-            </div>
-            <div class="current-container-result">
-              <span class="current-result" id="resultA">###</span>
-              <button type="button" class="" id="close-poll-button">Close Poll</button>
-              <span class="current-result" id="resultB">###</span>
-            </div>
+            <span class="current-option" id="current-optionA">###</span>
+            <span class="current-option" id="current-optionB">###</span>
+
+            <span class="current-result" id="resultA">###</span>
+            <span class="current-result" id="resultB">###</span>
+          </section>
+
+          <section class="button-section">
+            <button type="button" class="" id="decrementA">-</button>
+            <span>A</span>
+            <button type="button" class="" id="incrementA">+</button>
+            <button type="button" class="" id="close-poll-button">Close Poll</button>
+            <button type="button" class="" id="decrementB">-</button>
+            <span>B</span>
+            <button type="button" class="" id="incrementB">+</button>
           </section>
 
           <!-- PAST RESULTS SECTION -->
