@@ -84,13 +84,16 @@ incrementB.addEventListener('click', () => {
 });
 
 closePollButton.addEventListener('click', () => {
-    const poll = makePoll();
-    pastResults.push(poll);
+    if (questionData !== '') {
+        const poll = makePoll();
+        pastResults.push(poll);
+    }
     
     clearState();
     currentPollSection.textContent = '';
     displayAllPolls();
 });
+
 
 function displayCurrentPoll() {
     const thisPoll = makePoll();
