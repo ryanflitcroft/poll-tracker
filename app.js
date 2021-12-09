@@ -86,18 +86,17 @@ incrementB.addEventListener('click', () => {
 closePollButton.addEventListener('click', () => {
     const poll = makePoll();
     pastResults.push(poll);
-
-    clearState();
-    displayCurrentPoll();
-    displayAllPolls();
     
+    clearState();
+    currentPollSection.textContent = '';
+    displayAllPolls();
 });
 
 function displayCurrentPoll() {
     const thisPoll = makePoll();
 
     currentPollSection.textContent = '';
-
+    
     let myPoll = renderPoll(thisPoll);
     currentPollSection.append(myPoll);
 }
@@ -108,6 +107,7 @@ function displayAllPolls() {
         let pastPolls = renderPoll(past);
         closedPollContainer.append(pastPolls);
     }
+    
 }
 
 function clearState() {
