@@ -14,29 +14,27 @@
 
 <body>
     <header>
-        <h1>Poll Tracker</h1>
+        <h1>A Whole Poll</h1>
     </header>
 
     <main>
-        <!-- INPUT SECTION -->
         <section class="input-section">
             <form id="input-form">
-              <label for="q">Question
-                <input type="text" class="input-field" id="question-input" name="q" required>
+              <label for="q">Your Question:
+                <input type="text" class="input-field" id="question-input" name="q" placeholder="ask it here!" required>
               </label>
-              <label for="a">Answer A
-                <input type="text" class="input-field" id="answerA-input" name="a" required>
+              <label for="a">Answer A:
+                <input type="text" class="input-field" id="answerA-input" name="a" placeholder="give 'em an option!" required>
               </label>
-              <label for="b">Answer B
-                <input type="text" class="input-field" id="answerB-input" name="b" required>
+              <label for="b">Answer B:
+                <input type="text" class="input-field" id="answerB-input" name="b" placeholder="give em another!" required>
               </label>
               <button type="submit" form="input-form" id="input-submit">Submit</button>
             </form>
           </section>
 
-          <!-- CURRENT POLL SECTION -->
           <section class="current-poll-section" id="current-poll-section">
-            <!-- Current Poll item elements will be created in DOM -->
+
           </section>
 
           <section class="button-section">
@@ -49,13 +47,12 @@
             <button type="button" class="" id="incrementB">+</button>
           </section>
 
-          <!-- PAST RESULTS SECTION -->
-          <section class="past-results-section">
+          
             <h2>Past Results</h2>
             <div id="closed-poll-container">
-              <!-- Closed Poll item elements will be created in DOM -->
+
             </div>
-          </section>
+          
     </main>
     <footer>
         

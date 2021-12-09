@@ -7,6 +7,9 @@ body {
     --color5: ;
 
     color: var(--color1);
+    font-family: video,serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
@@ -15,7 +18,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color2);
+    box-shadow: 0 0.5em 1em var(--color1);
+    margin: 0 0 2em;
+    padding: 3em;
 }
 
 main {
@@ -23,7 +28,6 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -33,11 +37,9 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-section.input-section {
-    height: 35%;
-    background: aliceblue;
+    box-shadow: 0 0.5em 1.5em var(--color1);
+    margin: 1em;
+    padding: 1em;
 }
 
 form {
@@ -53,12 +55,9 @@ label {
     margin: 0.5em;
 }
 
-section.current-poll-section {
-    height: 25%;
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr); */
-    background: var(--color2);
+input {
+    font-family: video,serif;
+    text-align: center;
 }
 
 .current-option {
@@ -66,89 +65,59 @@ section.current-poll-section {
     margin: 0.5em 2em;
 }
 
-.current-result {
-
+.current-result-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    padding: 1em 0;
+    border: 3px solid var(--color1)
 }
 
+h2 {
+    width: 100%;
+    margin: 0.5em;
+    text-align: center;
+}
+
+.current-result-container span {
+    width: 100%;
+    display: inline-block;
+    margin: 0.5em;
+    text-align: center;
+}
+
+
 section.button-section {
-    height: 10%;
     flex-direction: row;
-    background: aliceblue;
 }
 
 button {
     margin: 0 1em;
-}
-
-/* .current-poll-section h2 {
-    color: dodgerblue;
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 1;
-    justify-self: center;
-    align-self: center;
-    margin: 0.25em;
-} */
-
-/* .current-containerA {
-    color: magenta;
-    grid-column: 1 / span 4;
-    grid-row: 2 / span 1;
-    justify-self: center;
-    align-self: center;
-} */
-
-/* .current-containerB {
-    color: magenta;
-    grid-column: 1 / span 4;
-    grid-row: 3 / span 1;
-    justify-self: center;
-    align-self: center;
-} */
-
-/* .current-container-result {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: green;
-    grid-column: 1 / span 4;
-    grid-row: 4 / span 1;
-    justify-self: center;
-    align-self: center;
-} */
-
-/* .current-option {
-    width: 150px;
-    display: inline-block;
-    margin: 0 1em;
-    background: honeydew;
-    text-align: center;
-} */
-
-/* .current-result {
-    width: 3em;
-    display: inline-block;
-    background: seashell;
-    text-align: center;
-    margin: 0 3em;
-} */
-
-section.past-results-section {
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    background: whitesmoke;
+    font-family: video,serif;
 }
 
 #closed-poll-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
-footer {
-    width: 100%;
-    height: 5%;
-    background: var(--color2);
+#closed-poll-container .current-result-container {
+    width: 300px;
+    margin: 1em;
+}
+
+@media only screen and (min-width: 500px) {
+    section{
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    section{
+        width: 70%;
+    }
 }
