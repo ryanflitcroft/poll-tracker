@@ -1,8 +1,6 @@
-const inputForm = document.getElementById('input-form');
+import { renderPoll } from './utils.js';
 
-// const currentPollQuestion = document.getElementById('current-poll-question');
-// const currentOptionA = document.getElementById('current-optionA');
-// const currentOptionB = document.getElementById('current-optionB');
+const inputForm = document.getElementById('input-form');
 
 const decrementA = document.getElementById('decrementA');
 const incrementA = document.getElementById('incrementA');
@@ -98,59 +96,67 @@ closePollButton.addEventListener('click', () => {
 
     clearState();
     displayCurrentPoll();
+    displayAllPolls();
 });
 
 function displayCurrentPoll() {
     // makePoll retrieves values in state, creates object
-    makePoll();
+    const thisPoll = makePoll();
 
     // clear current text content of currentPollSection
     currentPollSection.textContent = '';
 
     // create h2 element for currentPollQuestion
-    const currentPollQuestion = document.createElement('h2');
-    // create currentOptionAContainer div
-    // create currentOptionA span
-    // create resultA span
-    const currentOptionAContainer = document.createElement('div');
-    const currentOptionA = document.createElement('span');
-    const resultA = document.createElement('span');
-    // create currentOptionBContainer div
-    // create currentOptionB span
-    // create resultB span
-    const currentOptionBContainer = document.createElement('div');
-    const currentOptionB = document.createElement('span');
-    const resultB = document.createElement('span');
+    // const currentPollQuestion = document.createElement('h2');
+    // // create currentOptionAContainer div
+    // // create currentOptionA span
+    // // create resultA span
+    // const currentOptionAContainer = document.createElement('div');
+    // const currentOptionA = document.createElement('span');
+    // const resultA = document.createElement('span');
+    // // create currentOptionBContainer div
+    // // create currentOptionB span
+    // // create resultB span
+    // const currentOptionBContainer = document.createElement('div');
+    // const currentOptionB = document.createElement('span');
+    // const resultB = document.createElement('span');
 
-    // currentPollQuestion h2 textContent is equal to poll.questionData
-    currentPollQuestion.textContent = questionData;
+    // // currentPollQuestion h2 textContent is equal to poll.questionData
+    // currentPollQuestion.textContent = questionData;
 
-    // currentOptionA span textContent is equal to poll.resultAData
-    currentOptionA.textContent = resultAData;
-    // currentOptionB span textContent is equal to poll.resultBData
-    currentOptionB.textContent = resultBData;
+    // // currentOptionA span textContent is equal to poll.resultAData
+    // currentOptionA.textContent = resultAData;
+    // // currentOptionB span textContent is equal to poll.resultBData
+    // currentOptionB.textContent = resultBData;
 
-    if (resultATotal > 0 || resultBTotal > 0) {
-      // resultA span textContent is equal to poll.resultATotal
-        resultA.textContent = resultATotal;
-      // resultA span textContent is equal to poll.resultATotal
-        resultB.textContent = resultBTotal;
-    } 
+    // if (resultATotal > 0 || resultBTotal > 0) {
+    //   // resultA span textContent is equal to poll.resultATotal
+    //     resultA.textContent = resultATotal;
+    //   // resultA span textContent is equal to poll.resultATotal
+    //     resultB.textContent = resultBTotal;
+    // } 
 
-    currentOptionA.classList.add('current-option');
-    currentOptionB.classList.add('current-option');
-    resultA.classList.add('current-result');
-    resultB.classList.add('current-result');
+    // currentOptionA.classList.add('current-option');
+    // currentOptionB.classList.add('current-option');
+    // resultA.classList.add('current-result');
+    // resultB.classList.add('current-result');
 
-    currentOptionAContainer.append(currentOptionA, resultA);
-    currentOptionBContainer.append(currentOptionB, resultB);
+    // currentOptionAContainer.append(currentOptionA, resultA);
+    // currentOptionBContainer.append(currentOptionB, resultB);
 
-    currentPollSection.append(currentPollQuestion, currentOptionAContainer, currentOptionBContainer);
+    // currentPollSection.append(currentPollQuestion, currentOptionAContainer, currentOptionBContainer);
+
+    let pollEl = renderPoll(thisPoll);
+    currentPollSection.append(pollEl);
 }
 
 function displayAllPolls() {
-      
-    displayCurrentPoll();
+    // console.log(pastResults);
+    closedPollContainer.textContent = '';
+    for (let past of pastResults) {
+        let pastPolls = renderPoll(past);
+        closedPollContainer.append(pastPolls);
+    }
 }
 
 function clearState() {
