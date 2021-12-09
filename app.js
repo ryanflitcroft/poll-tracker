@@ -72,7 +72,7 @@ incrementA.addEventListener('click', () => {
     if (resultATotal >= 0) {
         resultATotal++;
     }
-    console.log(resultATotal, resultBTotal);
+    // console.log(resultATotal, resultBTotal);
     displayCurrentPoll();
 });
 
@@ -80,7 +80,7 @@ decrementB.addEventListener('click', () => {
     if (resultBTotal > 0) {
         resultBTotal--;
     }
-    console.log(resultATotal, resultBTotal);
+    // console.log(resultATotal, resultBTotal);
     displayCurrentPoll();
 });
 
@@ -130,14 +130,12 @@ function displayCurrentPoll() {
     // currentOptionB span textContent is equal to poll.resultBData
     currentOptionB.textContent = resultBData;
 
-
     if (resultATotal > 0 || resultBTotal > 0) {
       // resultA span textContent is equal to poll.resultATotal
         resultA.textContent = resultATotal;
       // resultA span textContent is equal to poll.resultATotal
         resultB.textContent = resultBTotal;
     } 
-
 
     currentOptionA.classList.add('current-option');
     currentOptionB.classList.add('current-option');
@@ -171,9 +169,6 @@ function makePoll() {
         resultATotal,
         resultBTotal,
     };
+    // console.log(poll);
     return poll;
-
-    console.log(poll);
 }
-
-makePoll();
