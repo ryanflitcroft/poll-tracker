@@ -52,35 +52,42 @@ inputForm.addEventListener('submit', (e) => {
 });
 
 decrementA.addEventListener('click', () => {
-    if (resultATotal > 0) {
-        resultATotal--;
+    if (questionData !== '') {
+        if (resultATotal > 0) {
+            resultATotal--;
+        }
+        displayCurrentPoll();
     }
-
-    displayCurrentPoll();
 });
 
 incrementA.addEventListener('click', () => {
-    if (resultATotal >= 0) {
-        resultATotal++;
-    }
+    if (questionData !== '') {
+        if (resultATotal >= 0) {
+            resultATotal++;
+        }
 
-    displayCurrentPoll();
+        displayCurrentPoll();
+}
 });
 
 decrementB.addEventListener('click', () => {
-    if (resultBTotal > 0) {
-        resultBTotal--;
-    }
+    if (questionData !== '') {
+        if (resultBTotal > 0) {
+            resultBTotal--;
+        }
 
-    displayCurrentPoll();
+        displayCurrentPoll();
+    }
 });
 
 incrementB.addEventListener('click', () => {
-    if (resultBTotal >= 0) {
-        resultBTotal++;
-    }
+    if (questionData !== '') {
+        if (resultBTotal >= 0) {
+            resultBTotal++;
+        }
 
-    displayCurrentPoll();
+        displayCurrentPoll();
+    }
 });
 
 closePollButton.addEventListener('click', () => {
