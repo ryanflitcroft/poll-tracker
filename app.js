@@ -8,29 +8,11 @@ const decrementB = document.getElementById('decrementB');
 const incrementB = document.getElementById('incrementB');
 
 const currentPollSection = document.getElementById('current-poll-section');
-// const resultA = document.getElementById('resultA');
-// const resultB = document.getElementById('resultB');
 
 const closePollButton = document.getElementById('close-poll-button');
 
 const closedPollContainer = document.getElementById('closed-poll-container');
 
-// console.log(
-// inputForm,
-// currentPollQuestion,
-// currentOptionA,
-// currentOptionB,
-// decrementA,
-// incrementA,
-// decrementB,
-// incrementB,
-// resultA,
-// resultB,
-// closePollButton,
-// closedPollContainer
-// );
-
-// let state
 let questionData = '';
 let resultAData = '';
 let resultBData = '';
@@ -52,35 +34,40 @@ inputForm.addEventListener('submit', (e) => {
 });
 
 decrementA.addEventListener('click', () => {
-    if (resultATotal > 0) {
-        resultATotal--;
+    if (questionData !== '') {
+        if (resultATotal > 0) {
+            resultATotal--;
+        }
+        displayCurrentPoll();
     }
-
-    displayCurrentPoll();
 });
 
 incrementA.addEventListener('click', () => {
-    if (resultATotal >= 0) {
-        resultATotal++;
-    }
+    if (questionData !== '') {
+        if (resultATotal >= 0) {
+            resultATotal++;
+        }
 
-    displayCurrentPoll();
+        displayCurrentPoll();
+    }
 });
 
 decrementB.addEventListener('click', () => {
-    if (resultBTotal > 0) {
-        resultBTotal--;
+    if (questionData !== '') {
+        if (resultBTotal > 0) {
+            resultBTotal--;
+        }
+        displayCurrentPoll();
     }
-
-    displayCurrentPoll();
 });
 
 incrementB.addEventListener('click', () => {
-    if (resultBTotal >= 0) {
-        resultBTotal++;
+    if (questionData !== '') {
+        if (resultBTotal >= 0) {
+            resultBTotal++;
+        }
+        displayCurrentPoll();
     }
-
-    displayCurrentPoll();
 });
 
 closePollButton.addEventListener('click', () => {
