@@ -61,6 +61,15 @@ section.current-poll-section {
     background: var(--color2);
 }
 
+.current-option {
+    display: inline-block;
+    margin: 0.5em 2em;
+}
+
+.current-result {
+
+}
+
 section.button-section {
     height: 10%;
     flex-direction: row;
