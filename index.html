@@ -14,13 +14,48 @@
 
 <body>
     <header>
-
+        <h1>A Whole Poll</h1>
     </header>
-    <main>
 
+    <main>
+        <section class="input-section">
+            <form id="input-form">
+              <label for="q">Your Question:
+                <input type="text" class="input-field" id="question-input" name="q" placeholder="ask it here!" required>
+              </label>
+              <label for="a">Answer A:
+                <input type="text" class="input-field" id="answerA-input" name="a" placeholder="give 'em an option!" required>
+              </label>
+              <label for="b">Answer B:
+                <input type="text" class="input-field" id="answerB-input" name="b" placeholder="give em another!" required>
+              </label>
+              <button type="submit" form="input-form" id="input-submit">Submit</button>
+            </form>
+          </section>
+
+          <section class="current-poll-section" id="current-poll-section">
+
+          </section>
+
+          <section class="button-section">
+            <button type="button" class="" id="decrementA">-</button>
+            <span>A</span>
+            <button type="button" class="" id="incrementA">+</button>
+            <button type="button" class="" id="close-poll-button">Close Poll</button>
+            <button type="button" class="" id="decrementB">-</button>
+            <span>B</span>
+            <button type="button" class="" id="incrementB">+</button>
+          </section>
+
+          
+            <h2>Past Results</h2>
+            <div id="closed-poll-container">
+
+            </div>
+          
     </main>
     <footer>
-
+        
     </footer>
 
     <script type="module" src="./app.js"></script>

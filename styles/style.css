@@ -1,16 +1,123 @@
 
 body {
-
     --color1: #3d3d3d;
-    --color2: ;
+    --color2: #e4e4e4;
     --color3: ;
     --color4: ;
     --color5: ;
 
     color: var(--color1);
+    font-family: video,serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5em 1em var(--color1);
+    margin: 0 0 2em;
+    padding: 3em;
 }
 
 main {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5em 1.5em var(--color1);
+    margin: 1em;
+    padding: 1em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5em;
+}
+
+input {
+    font-family: video,serif;
+    text-align: center;
+}
+
+.current-option {
+    display: inline-block;
+    margin: 0.5em 2em;
+}
+
+.current-result-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    padding: 1em 0;
+    border: 3px solid var(--color1)
+}
+
+h2 {
+    width: 100%;
+    margin: 0.5em;
+    text-align: center;
+}
+
+.current-result-container span {
+    width: 100%;
+    display: inline-block;
+    margin: 0.5em;
+    text-align: center;
+}
+
+
+section.button-section {
+    flex-direction: row;
+}
+
+button {
+    margin: 0 1em;
+    font-family: video,serif;
+}
+
+#closed-poll-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#closed-poll-container .current-result-container {
+    width: 300px;
+    margin: 1em;
+}
+
+@media only screen and (min-width: 500px) {
+    section{
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    section{
+        width: 70%;
+    }
 }
